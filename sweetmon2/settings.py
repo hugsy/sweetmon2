@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vugf#x=7v(k#lbte%u1dc5+lebyb7y-9m!aa3oyro6nxc71=%='
+SECRET_KEY = '612a7d94940845e86a414306d3648c7f3e92183b3fd40aa269c0c2639e27e2c2dd3033ff5cdd4f7dff87f0048f9339ce6a0ab783679e78e4f97306d6f40073a1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -116,7 +116,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 STATIC_URL = '/static/'  # change later DEBUG
