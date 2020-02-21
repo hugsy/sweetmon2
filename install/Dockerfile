@@ -22,12 +22,9 @@ RUN apt install -y python3 python3-pip apache2 virtualenv libapache2-mod-wsgi-py
 RUN mkdir -p /app
 WORKDIR /app
 
-# Copy sweetmon into image
-COPY ../../sweetmon2 /app/
+RUN git clone https://github.com/hugsy/sweetmon2 /app/sweetmon2
+RUN cp /app/sweetmon2/install/sweetmon2.conf /etc/apache2/sites-available/sweetmon2.conf
 
-# Copy files into Docker.
-ADD ./ /app
-COPY ./sweetmon2.conf /etc/apache2/sites-available/sweetmon2.conf
 
 # Apache2 setting
 RUN a2dissite 000-default
