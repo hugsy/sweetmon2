@@ -74,16 +74,27 @@ WSGI_APPLICATION = 'sweetmon2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ['MYSQL_DATABASE'],
+#         'USER': os.environ['MYSQL_USER'],
+#         'PASSWORD': os.environ['MYSQL_PASSWORD'],
+#         'HOST': 'sweetmon2-db',
+#         'PORT': '3306',
+#     }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ['MYSQL_DATABASE'],
-        'USER': os.environ['MYSQL_USER'],
-        'PASSWORD': os.environ['MYSQL_PASSWORD'],
-        'HOST': 'sweetmon2-db',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
+
+
 
 
 # Password validation
